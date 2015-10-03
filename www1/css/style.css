@@ -1,0 +1,172 @@
+/* Empty. Add your own CSS if you like */
+
+
+.slider {
+  height: 100%;
+}
+.slider-slide {
+  padding-top: 80px;
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}
+
+#logo {
+  margin: 30px 0px;
+}
+
+#list {
+  width: 170px;
+  margin: 30px auto;
+  font-size: 20px;
+}
+#list ol {
+  margin-top: 30px;
+}
+#list ol li {
+  text-align: left;
+  list-style: decimal;
+  margin: 10px 0px;
+}
+
+.button.ng-hide{
+  display:none;
+}
+
+
+
+.slider-bg{
+	height: 50%;
+	text-align: center;
+}
+.scroll{
+	height: 100%;
+}
+.color-red{
+	background-color: red;
+	height: 100%;
+	width: 100%;
+}
+.color-yellow{
+	background-color: yellow;
+	height: 100%;
+	width: 100%;
+}
+/* Empty. Add your own CSS if you like */
+
+
+body {
+	font-size: 15px;
+	color: #333;
+
+	background: #fff;
+	padding: 0;
+	margin: 0;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-style: normal;
+	line-height: 1;
+}
+
+.authorHeader {
+	position: relative;
+	text-align: center;
+	background-color: #ffffff;
+}
+
+.authorHeader h1 {
+	padding-bottom: 0;
+	font-weight: 400;
+	padding: 0;
+}
+
+.authorHeader h2 {
+font-size: 12px;
+color: #999;
+margin: 5px 0 0;
+font-weight: 400;
+}
+
+.authorBackground {
+	background-color: #000;
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	height: 93px;
+}
+
+.authorBackground img {
+	/* -webkit-filter: blur(30px); */
+	-moz-filter: blur(30px);
+	-ms-filter: blur(30px);
+	-o-filter: blur(30px);
+	filter: blur(30px);
+	/* width: 100%; */
+	opacity: .5;
+}
+
+
+ul.authorConnectIcons {
+	list-style-type: none;
+	margin: 0;
+	padding: 5px 0 0;
+	min-height: 52px;
+}
+
+ul.authorConnectIcons li {
+	position: relative;
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+	margin: 0;
+	padding: 0;
+	-webkit-background-size: 120px 7348px;
+	background-size: 120px 7348px;
+}
+
+/*
+.authorIconFacebook {
+	background: url(/build/resources/images/master-sprite-8aa32b3017fdffe090fd2de19c6e65a2.png) no-repeat 0 -6732px;
+}
+
+.authorIconTwitter {
+	background: url(/build/resources/images/master-sprite-8aa32b3017fdffe090fd2de19c6e65a2.png) no-repeat 0 -6820px;
+}
+
+.authorIconWebsite {
+	background: url(/build/resources/images/master-sprite-8aa32b3017fdffe090fd2de19c6e65a2.png) no-repeat 0 -7172px;
+}
+*/
+
+.authorLargeIconRow {
+	position: relative;
+	margin-top: 3px;
+	margin-bottom: 76px;
+	background-color: #ffffff;
+	width: 100%;
+}
+
+.authorLargeIconRow span {
+	display: inline-block;
+	border-radius: 38px;
+	width: 76px;
+	height: 76px;
+	border: 1px solid #e6e6e6;
+	position: absolute;
+	left: 50%;
+	margin-left: -38px;
+	background-position: center center;
+	background-size: cover;
+}
+
+.centerBlock {
+	margin: 0 auto;
+	max-width: 1024px;
+}
+
+body .truncateBox .overflowBox {
+overflow: hidden;
+}
+/* Empty. Add your own CSS if you like */

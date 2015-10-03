@@ -1,0 +1,30 @@
+<ion-view title="Dashboard">
+
+      <ion-nav-buttons side="left">
+
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+        
+      </ion-nav-buttons>
+      <ion-content has-header="true" padding="true">
+        <form multiple="{{allowMultiple}}" >
+        <a class="button button-fullwidth" nav-clear ng-click="toLogout(loginData)">Logout</a>
+        <button class="button" ng-click="takePicture()"> Camera</button>
+        <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
+        <img ng-show="imgURI === undefined" ng-src="http://placehold.it/300x300" ng-model="isimg">
+
+        <button class="button" ng-click="SimpanGambar()">Simpan</button>
+        </form>
+      </ion-content>
+
+      <div class="tabs tabs-icon-only">
+        <a nav-clear class="tab-item disable-user-behavior active" title="Home" nav-clear ui-sref="snd.home">
+          <i class="icon ion-home"></i><span class="tab-title ng-binding" ng-bind-html="title"></span>
+        </a>
+        <a nav-clear class="tab-item disable-user-behavior" title="Chat" icon-on="ion-ios7-filing" icon-off="ion-ios7-filing-outline" ui-sref="snd.chat">
+          <i class="icon ion-chatbubbles"></i><span class="tab-title ng-binding" ng-bind-html="title"></span>
+        </a>
+        <a nav-clear class="tab-item disable-user-behavior" title="Drink" icon-on="ion-ios7-filing" icon-off="ion-ios7-filing-outline" ui-sref="snd.drink">
+          <i class="icon ion-wineglass"></i><span class="tab-title ng-binding" ng-bind-html="title"></span>
+        </a>
+      </div>
+  </ion-view>

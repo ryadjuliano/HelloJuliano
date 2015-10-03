@@ -1,0 +1,26 @@
+<ion-view title="Registrasi">
+    <ion-content padding="true" scroll="false" class="has-header has-footer">
+        <form>
+            <ion-list>
+             <label class="item item-input">
+                    <span class="input-label">Email</span>
+                    <input type="text" placeholder="" ng-model="regData.email">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">First Name</span>
+                    <input type="text" placeholder="" ng-model="regData.firstname">
+                </label>
+                 <label class="item item-input">
+                    <span class="input-label">Last Name</span>
+                    <input type="text" placeholder="" ng-model="regData.lastname">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input type="password" placeholder="" ng-model="regData.password">
+                </label>
+            </ion-list>
+            <div class="spacer" style="height: 40px;"></div>
+            <button class="button button-positive button-block" ng-click="doReg(regData)">Create</button>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget id="com.ionicframework.hellojuliano263217" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+   <platform name="android">
+    <!--
+    <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
+    <icon src="resources/android/icon/drawable-mdpi-icon.png" density="mdpi"/>
+    <icon src="resources/android/icon/drawable-hdpi-icon.png" density="hdpi"/>
+    <icon src="resources/android/icon/drawable-xhdpi-icon.png" density="xhdpi"/>
+    <icon src="resources/android/icon/drawable-xxhdpi-icon.png" density="xxhdpi"/>
+    <icon src="resources/android/icon/drawable-xxxhdpi-icon.png" density="xxxhdpi"/>
+    -->
+    <splash src="res/screen/android/screen.png" density="land-ldpi"/>
+    <splash src="res/screen/android/screen.png" density="land-mdpi"/>
+    <splash src="res/screen/android/screen.png" density="land-hdpi"/>
+    <splash src="res/screen/android/screen.png" density="land-xhdpi"/>
+    <splash src="res/screen/android/screen.png" density="land-xxhdpi"/>
+    <splash src="res/screen/android/screen.png" density="land-xxxhdpi"/>
+    <splash src="res/screen/android/screen.png" density="port-ldpi"/>
+    <splash src="res/screen/android/screen.png" density="port-mdpi"/>
+    <splash src="res/screen/android/screen.png" density="port-hdpi"/>
+    <splash src="res/screen/android/screen.png" density="port-xhdpi"/>
+    <splash src="res/screen/android/screen.png" density="port-xxhdpi"/>
+    <splash src="res/screen/android/screen.png" density="port-xxxhdpi"/>
+  </platform>
+  <name>ComplainApp</name>
+  <description>
+        An Ionic Framework and Cordova project.
+    </description>
+  <author email="hi@ionicframework" href="http://ionicframework.com/">
+      Ionic Framework Team
+    </author>
+  <content src="index.html"/>
+  <access origin="*"/>
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="SplashScreenDelay" value="3000"/>
+  <feature name="StatusBar">
+    <param name="ios-package" value="CDVStatusBar" onload="true"/>
+  </feature>
+  <icon src="res/icon.png"/>
+</widget>

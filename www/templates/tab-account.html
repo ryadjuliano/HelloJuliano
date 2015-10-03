@@ -1,0 +1,52 @@
+<ion-view view-title="Account">
+  <ion-content>
+  <ion-item ng-repeat="y in prof " class="feed-item-holder">
+   			<!--
+            <div class = "col header text-center">
+               <img src="http://103.224.165.232:8080/ipc-convert/complain/apps/photo/{{y.DATA_PROFILE.photo}}"  class="img-circle" />
+            </div>-->
+           <label class="item q-camera" align="center" ng-class="{'has-error':pageInfo.fields_error.title}">
+           <div class = "col header text-center">
+               <img src="http://103.224.165.232:8080/ipc-convert/complain/apps/photo/{{y.DATA_PROFILE.photo}}"  class="img-circle" />
+            </div>
+
+          <div class="item item-image no-border" ng-show="imgURI">
+             <img ng-src="{{imgURI}}" class="img-circle"  />
+          </div>
+          
+          <button class="button q-placeholder" ng-click="takePicture()">
+            <span class="mgg-camera-icon"></span>
+            <p>Take a photo of your profile</p>
+          </button>
+        </label>
+        
+        <label class="item no-border no-padding-v" style="margin-bottom: 30px;">
+          <button class="button button-icon icon button-clear mgg-icon-32 gallery-icon" ng-click="takePicture(true)">Insert an image from gallery</button>
+        </label>
+        <form>
+        <div class="list list-inset">
+		  <label class="item item-input">
+		    <!--<input type="text" placeholder="First Name" value="{{y.DATA_PROFILE.nama_depan}}"  >-->
+		    <input type="text" placeholder="First Name" ng-model="prof.firstname" ng-init="prof.firstname=y.DATA_PROFILE.nama_depan"/> 
+		  </label>
+		  <label class="item item-input">
+		    <input type="text" placeholder="Last Name" ng-model="prof.lastname" ng-init="prof.lastname=y.DATA_PROFILE.nama_belakang">
+		  </label>
+		  <label class="item item-input">
+		    <input type="text" placeholder="Email" ng-model="prof.email" ng-init="prof.email=y.DATA_PROFILE.email">
+		  </label>
+		  <label class="item item-input">
+		    <input type="text" placeholder="Password" ng-model="prof.newpassword">
+		    <input type="hidden" placeholder="Password" ng-model="prof.oldpassword" ng-init="prof.oldpassword=y.DATA_PROFILE.password">
+		    
+		  </label>
+		
+			<div class="spacer" style="height: 10px;"></div>
+            <button class="button button-positive button-block" ng-click="updateProf(prof)">Update</button>
+            <div class="spacer" style="height: 10px;"></div>
+            <button class="button button-stable button-block" ng-click="signout()">Logout</button>
+          </div>
+          </form>
+     <ion-item>
+  </ion-content>
+</ion-view>

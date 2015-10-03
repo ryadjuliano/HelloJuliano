@@ -1,0 +1,36 @@
+<ion-view view-title="Dashboard">
+  <ion-content>
+    <ion-list>
+    <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+    <ion-item ng-repeat="x in ask " class="feed-item-holder">
+
+      <ion-item class="feed-item-holder">
+        <div class="card no-margin-h">
+          <div class="item item-avatar no-border-bottom" style="border-top:1px solid #ddd">
+            <img ng-src="http://103.224.165.232:8080/ipc-convert/complain/apps/photo/{{x.DATA_TX.photouser}}"/> 
+            <h3>{{x.DATA_TX.namauser}}</h3>
+            <button class="button button-icon icon button-clear mgg-icon-32 clock-icon" style="margin-left: -3px; padding-left: 0px;">{{x.DATA_TX.datecreate}}</button>
+          </div>
+          <div class="item item-text-wrap feed-content">
+            <h2 class="title"></h2>
+            <p>{{x.DATA_TX.isicomplain}}</p>
+            <div class="item item-image no-border">
+              <ion-scroll zooming="true" direction="xy">
+                <img  ng-src="http://103.224.165.232:8080/ipc-convert/complain/apps/{{x.DATA_TX.aduanphoto}}" />
+              </ion-scroll>
+            </div>
+          </div>
+          <div class="item item-divider divider-plain no-border-top no-padding-h">
+            <div class="row" style="float:right; width:auto">
+              <button class="button button-icon icon button-clear mgg-icon-32 compose-icon no-padding-h"></button>
+            </div>
+            <a class="button button-icon icon button-clear mgg-icon-32 comment-icon" href="#/tab/dash/{{x.DATA_TX.counttindaklanjut}}/{{x.DATA_TX.idaduan}}"> Status: Feed Back Sent Updates({{x.DATA_TX.counttindaklanjut}})</a>
+          </div>
+
+        </div>
+      </ion-item>
+      <!--<ion-infinite-scroll ng-if="!pageInfo.noInfi" on-infinite="infi();"></ion-infinite-scroll>
+    </ion-list>-->
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,30 @@
+<ion-view title="Product">
+
+      <ion-nav-buttons side="left">
+      <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+      </ion-nav-buttons>
+      <ion-content >
+          <form role="form" method="post">
+               <div class="list list-inset">
+                  <label class="item item-input">
+                    <input type="text" placeholder="Nama Barang" ng-model="pr.namabarang">
+                  </label>
+                  <label class="item item-input">
+                    <input type="text" placeholder="Kategori" ng-model="pr.kategori" >
+                  </label>
+                   <label class="item item-input">
+                    <input type="text" placeholder="Harga" ng-model="pr.harga">
+                  </label>
+                   <label class="item item-input">
+                    <input type="text" placeholder="Berat" ng-model="pr.berat">
+                  </label>
+                   <label class="item item-input">
+                    <input type="text" placeholder="Kondisi" ng-model="pr.kondisi">
+                  </label>
+                <button type="submit"  class="button button-block button-positive" ng-click="toSave(pr)" name="add" >Submit</button>
+              </div>
+              <pre>{{message}}</pre>
+              </form>
+
+      </ion-content>
+</ion-view>

@@ -1,0 +1,36 @@
+<ion-view view-title="Complain">
+ <ion-content>
+    <div class="list q-list">
+      <form multiple="{{allowMultiple}}" name="askForm" id="askForm">
+        <label class="item item-select" style="margin-bottom: 2px;" ng-class="{'has-error':pageInfo.fields_error.subject}">
+          <select class="q-select" ng-model="formdata.dept" required>
+            <option value="">Choose Departement</option>
+            <option ng-repeat="d in dept" value="{{d.DATA_DEPT.value}}">{{d.DATA_DEPT.text}}</option>
+          </select>
+        </label>
+        <label class="item q-camera" align="center" ng-class="{'has-error':pageInfo.fields_error.title}">
+          <div class="item item-image no-border" ng-show="imgURI">
+            <ion-scroll zooming="true" direction="xy">
+              <img ng-src="{{imgURI}}" />
+            </ion-scroll>
+          </div>
+          
+          <button class="button q-placeholder" ng-click="takePicture()">
+            <span class="mgg-camera-icon"></span>
+            <p>Take a photo of your question</p>
+          </button>
+        </label>
+        
+        <label class="item no-border no-padding-v" style="margin-bottom: 30px;">
+          <button class="button button-icon icon button-clear mgg-icon-32 gallery-icon" ng-click="takePicture(true)">Insert an image from gallery</button>
+        </label>
+        
+        <label class="item item-text-wrap q-content" align="center" ng-class="{'has-error':pageInfo.fields_error.question}">
+          <textarea placeholder="Report 500 Characters Set" ng-model="formdata.posting" ng-required="true"></textarea>
+        </label>
+            <div class="spacer" style="height: 40px;"></div>
+            <button class="button button-positive button-block" ng-click="doUpload(formdata)">Posting</button>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>

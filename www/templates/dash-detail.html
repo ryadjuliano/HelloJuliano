@@ -1,0 +1,44 @@
+<ion-view view-title="Detail Complain">
+  <ion-content>
+    <ion-list>
+    <ion-item ng-repeat="x in cmp" class="feed-item-holder">
+      <ion-item class="feed-item-holder">
+        <div class="card no-margin-h">
+          <div class="item item-avatar no-border-bottom" style="border-top:1px solid #ddd">
+            <img ng-src="http://103.224.165.232:8080/ipc-convert/complain/apps/photo/{{x.DATA_COMPLAIN.photouser}}"/> 
+            <h3>{{x.DATA_COMPLAIN.nama}}</h3>
+            <button class="button button-icon icon button-clear mgg-icon-32 clock-icon" style="margin-left: -3px; padding-left: 0px;">{{x.DATA_COMPLAIN.datecreate}}</button>
+          </div>
+          <div class="item item-text-wrap feed-content">
+            <h2 class="title"></h2>
+            <p>{{x.DATA_COMPLAIN.isicomplain}}</p>
+            
+
+            <div class="item item-image no-border">
+              <ion-scroll zooming="false" direction="xy">
+                <img  ng-src="http://103.224.165.232:8080/ipc-convert/complain/apps/{{x.DATA_COMPLAIN.aduanphoto}}" />
+              </ion-scroll>
+            </div>
+          </div>
+          <div class="item item-divider divider-plain no-border-top no-padding-h">
+            <div class="row" style="float:right; width:auto">
+              
+            </div>
+          </div>
+
+          <div class="item item-avatar no-border-bottom" style="border-top:1px solid #ddd">
+            <img ng-src="http://103.224.165.232:8080/ipc-convert/complain/apps/photo/defaultprofile.jpg"/> 
+            <h3>{{x.DATA_COMPLAIN.namadept}}</h3>
+            <button class="button button-icon icon button-clear mgg-icon-32 clock-icon" style="margin-left: -3px; padding-left: 0px;">{{x.DATA_COMPLAIN.tglproseskerja}}</button>
+          </div>
+          <div class="item item-text-wrap feed-content">
+            <h2 class="title"></h2>
+            <p>{{x.DATA_COMPLAIN.isiprogres}}</p>
+          </div>
+        </div>
+      </ion-item>
+      <!--<ion-infinite-scroll ng-if="!pageInfo.noInfi" on-infinite="infi();"></ion-infinite-scroll>
+    </ion-list>-->
+
+  </ion-content>
+</ion-view>

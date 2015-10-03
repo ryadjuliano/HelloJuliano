@@ -1,0 +1,32 @@
+<ion-view view-title="Message">
+  <ion-content>
+    <ion-list>
+    <ion-item ng-repeat="y in psn " class="feed-item-holder">
+      <ion-item class="feed-item-holder">
+        <div class="card no-margin-h">
+          <div class="item item-avatar no-border-bottom" style="border-top:1px solid #ddd">
+            <img ng-src="" />
+            <h3>{{y.DATA_PSN.pembuat}}</h3>
+            <button class="button button-icon icon button-clear mgg-icon-32 clock-icon" style="margin-left: -3px; padding-left: 0px;">{{y.DATA_PSN.tanggal}}</button>
+          </div>
+          <div class="item item-text-wrap feed-content">
+            <h2 class="title">{{y.DATA_PSN.judul}}</h2>
+            <p>{{y.DATA_PSN.isi_pesan}}</p>
+            <button ng-if="feed.subject_title" class="button button-clear button-positive no-padding-left">asdasd</button>
+            <a ng-if="feed.subject_title && feed.topic_title" class="button button-icon icon ion-android-arrow-dropright"></a>
+            <button ng-if="feed.topic_title" class="button button-clear button-positive">asdasd</button>
+
+            <div class="item item-image no-border">
+              <ion-scroll zooming="true" direction="xy">
+                <img ng-if="feed.image_url" ng-src="{{feed.image_url}}" />
+              </ion-scroll>
+            </div>
+          </div>
+          
+        </div>
+      </ion-item>
+      <!--<ion-infinite-scroll ng-if="!pageInfo.noInfi" on-infinite="infi();"></ion-infinite-scroll>
+    </ion-list>-->
+
+  </ion-content>
+</ion-view>

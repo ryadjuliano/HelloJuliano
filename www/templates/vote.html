@@ -1,0 +1,51 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">My Vote</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeQuestion()">X</button>
+    </div>
+  </ion-header-bar>
+  <ion-content ng-repeat="x in plo">
+    <form multiple="{{allowMultiple}}" >      
+      <div class="list">
+      <h1 class="title">{{x.DATA_POOL.judul}}</h1>
+      <ul class="list">
+         <label class="item item-radio">
+          <input type="radio" name="group" ng-model="uploadData.choose" value="{{x.DATA_POOL.kondisia}}" >
+              <div class="item-content">
+                {{x.DATA_POOL.kondisia}}
+              </div>
+              <i class="radio-icon ion-checkmark"></i>
+        </label>
+       <label class="item item-radio">
+          <input type="radio" name="group" ng-model="uploadData.choose" value="{{x.DATA_POOL.kondisib}}" >
+              <div class="item-content">
+                {{x.DATA_POOL.kondisib}}
+              </div>
+              <i class="radio-icon ion-checkmark"></i>
+        </label>
+        <label class="item item-radio">
+          <input type="radio" name="group" ng-model="uploadData.choose" value="{{x.DATA_POOL.kondisic}}">
+              <div class="item-content">
+                {{x.DATA_POOL.kondisic}}
+              </div>
+              <i class="radio-icon ion-checkmark"></i>
+        </label>
+        <label class="item item-radio">
+          <input type="radio" name="group" ng-model="uploadData.choose" value="{{x.DATA_POOL.kondisid}}">
+              <div class="item-content">
+                {{x.DATA_POOL.kondisid}}
+              </div>
+              <i class="radio-icon ion-checkmark"></i>
+        </label>
+      </ul>
+      </div>
+      <label class="item">
+           <button class="button button-block button-positive" type="submit" ng-click="doVote(uploadData)">Submit</button>
+        </label>
+
+
+    </form>
+     <ion-item>
+  </ion-content>
+</ion-modal-view>
