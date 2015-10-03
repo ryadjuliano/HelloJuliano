@@ -263,18 +263,21 @@ angular.module('starter.controllers', ['ngCordova','chart.js'])
   }
 
   $scope.updateProf = function(prof){
-      var pwd = prof.newpassword;
+      var passwordnew = prof.newpassword;
+      var passwordold = prof.oldpassword;
+      /*
       if(pwd == undefined)
       {
-          var password = prof.oldpassword;
+          var passwordold = prof.oldpassword;
       }
       else
       {
           var password = prof.newpassword;
 
-      }
-      console.log(password);
-      var $promise = $http.post("http://103.224.165.232:8080/ipc-convert/complain/apps/updateprofiledata.php?kode=dua",{'email': prof.email, 'namad': prof.firstname,'namab': prof.lastname,'password': password,'idguest': localStorage.getItem('ID')});
+      }*/
+      console.log(passwordnew);
+      console.log(passwordold);
+      var $promise = $http.post("http://103.224.165.232:8080/ipc-convert/complain/apps/updateprofiledata.php?kode=dua",{'email': prof.email, 'namad': prof.firstname,'namab': prof.lastname,'passwordnew': passwordnew,'passwordold':passwordold,'idguest': localStorage.getItem('ID')});
         $promise.success(function(msg){
           var status = msg.users.STATUS;
               if(status  === 'SUCCESS')
@@ -369,6 +372,7 @@ angular.module('starter.controllers', ['ngCordova','chart.js'])
         $promise.success(function(data){
           var st = data.vote[0];
           alert(st.STATUS);
+          $scope.modal.hide();
           //console.log(data.vote[0]);            
         });
       console.log('Choose',$scope.uploadData.choose);

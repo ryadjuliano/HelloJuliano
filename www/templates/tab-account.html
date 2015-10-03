@@ -10,9 +10,14 @@
                <img src="http://103.224.165.232:8080/ipc-convert/complain/apps/photo/{{y.DATA_PROFILE.photo}}"  class="img-circle" />
             </div>
 
+            <div class = "col header text-center" ng-show="imgURI">
+               <img ng-src="{{imgURI}}" class="img-circle"  />
+            </div>
+
+            <!--
           <div class="item item-image no-border" ng-show="imgURI">
              <img ng-src="{{imgURI}}" class="img-circle"  />
-          </div>
+          </div>-->
           
           <button class="button q-placeholder" ng-click="takePicture()">
             <span class="mgg-camera-icon"></span>
